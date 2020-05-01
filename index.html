@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMDb</title>
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7.9.6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+</head>
+  <body>
+    <div id='firstLook'></div>
+    <div id='photos'></div>
+    <div id='cast'></div>
+    <div id='moreLikeThis'></div>
+    <div id='didYouKnow'></div>
+    <script type="text/babel">
+      ReactDOM.render(
+        pragma(firstLook, document.querySelector('#firstLook')),
+        pragma(photos, document.querySelector('#photos')),
+        pragma(cast, document.querySelector('#cast')),
+        pragma(moreLikeThis, document.querySelector('#moreLikeThis')),
+        pragma(didYouKnow, document.querySelector('#didYouKnow'))
+      )
+    </script>
+  </body>
+</html>

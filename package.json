@@ -17,8 +17,21 @@
   },
   "homepage": "https://github.com/NKAJE-FEC-BLD09/J-proxy#readme",
   "dependencies": {
+    "@babel/core": "^7.9.6",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "grunt": "^1.1.0",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-qunit": "^3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-rework": "^0.1.0"
   }
 }
