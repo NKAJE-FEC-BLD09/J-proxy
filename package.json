@@ -4,20 +4,19 @@
   "description": "proxy server for FEC",
   "main": "index.jsx",
   "scripts": {
-    "setup": "run-p build start",
+    "setup": "run-p build start serve",
     "build": "webpack --config ./webpack.config.js --mode production --watch",
     "start": "webpack-dev-server --config ./webpack.config.js --open --mode development",
+    "serve": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "proxy": "http://localhost:8082",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NKAJE-FEC-BLD09/J-proxy.git"
   },
   "author": "Jackson Reinagel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NKAJE-FEC-BLD09/J-proxy/issues"
-  },
   "homepage": "https://github.com/NKAJE-FEC-BLD09/J-proxy#readme",
   "dependencies": {
     "@babel/core": "^7.9.6",
@@ -28,6 +27,8 @@
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-eslint": "^10.1.0",
