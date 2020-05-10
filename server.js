@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'index.html'))
 });
 
-const port = process.env.PORT || 8082;
+const port = process.env.PORT || 8080;
 
 // console.log that your server is up and running
 app.listen(port, () => {

@@ -1,43 +1,25 @@
 import React, { Component } from 'react';
 
+import FirstLook from '../components/A-firstLook-service/src/App.jsx';
+import Photos from '../components/J-Photos-service/client/src/components/App.jsx';
+import Cast from '../components/N-Cast-Service/client/component/app.jsx';
+import MoreLikeThis from '../components/k-morelikethis-service/src/App.jsx';
+
 class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      data: null
-    };
   }
-
-  componentDidMount() {
-      // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
-  }
-    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/photos');
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message);
-    }
-    return body;
-  };
 
   render() {
     return (
       <div className="App">
-
-        <p>{this.state.data}</p>
+        <FirstLook />
+        <Photos />
+        <Cast />
+        <MoreLikeThis />
       </div>
     );
   }
 }
-        // <FirstLook />
-        // <Photos />
-        // <Cast />
-        // <MoreLikeThis />
 
 export default App;
